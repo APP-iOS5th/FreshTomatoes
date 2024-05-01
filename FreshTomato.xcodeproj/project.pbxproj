@@ -28,6 +28,7 @@
 		581C6FAE2BE1DD20004060FE /* MovieCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581C6FAD2BE1DD20004060FE /* MovieCard.swift */; };
 		581C6FB02BE1E12E004060FE /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581C6FAF2BE1E12E004060FE /* TitleView.swift */; };
 		585D1B162BE139FF004A4C6C /* NowShowingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585D1B152BE139FF004A4C6C /* NowShowingCardView.swift */; };
+		58BD15092BE291ED00F12712 /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BD15082BE291ED00F12712 /* BackgroundImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		581C6FAD2BE1DD20004060FE /* MovieCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCard.swift; sourceTree = "<group>"; };
 		581C6FAF2BE1E12E004060FE /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		585D1B152BE139FF004A4C6C /* NowShowingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowShowingCardView.swift; sourceTree = "<group>"; };
+		58BD15082BE291ED00F12712 /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				585D1B152BE139FF004A4C6C /* NowShowingCardView.swift */,
+				58BD15082BE291ED00F12712 /* BackgroundImageView.swift */,
 				581C6FAF2BE1E12E004060FE /* TitleView.swift */,
 				581C6FAD2BE1DD20004060FE /* MovieCard.swift */,
 			);
@@ -262,6 +265,7 @@
 				469304BD2BE0CFCF003BBA13 /* ViewExtension.swift in Sources */,
 				581C6FAE2BE1DD20004060FE /* MovieCard.swift in Sources */,
 				469304C92BE0D119003BBA13 /* ThirdViewModel.swift in Sources */,
+				58BD15092BE291ED00F12712 /* BackgroundImageView.swift in Sources */,
 				4693049C2BE0C50E003BBA13 /* ContentView.swift in Sources */,
 				469304C12BE0D09D003BBA13 /* SecondView.swift in Sources */,
 				4693049A2BE0C50E003BBA13 /* FreshTomatoApp.swift in Sources */,

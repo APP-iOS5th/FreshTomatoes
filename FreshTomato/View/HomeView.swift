@@ -11,54 +11,53 @@ import Combine
 struct HomeView: View {
     @StateObject var movieService: MovieService = MovieService()
     
-    @State var currentMovie: String = ""
+    @State var currentMovie: [String] = []
     @Namespace var scrollIndex
     
     var body: some View {
         GeometryReader { geometry in
             NavigationStack {
                 ScrollView {
-                    ZStack(alignment: .top) {
-                        ZStack {
-                            AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/original\(currentMovie)")) { image in
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: geometry.size.width)
-                                    .overlay {
-                                        LinearGradient(colors: [.white, .clear, .clear, .white], startPoint: .top, endPoint: .bottom)
-                                    }
-                            } placeholder: {
-                                ProgressView()
-                            }
-                            .padding(.top, geometry.size.height * 0.03)
-                        }
                         VStack {
                             TitleView(semiTitle: "Fresh Tomatoes", title: "NOW SHOWING", buttonTitle: "View all")
-                            .padding(.horizontal)
+                                .padding(.horizontal)
                             
-//                            foreach로 nowshowingcardview 생성하면서 뒤에 배경까지 같이 생성?!
+                            
+                            //배경을 foreach로 생성하고 scrollview index를 넣어, 영화 card의 scroll index가 변할때 (배경index = 영화index)로 맞추어 배경 scroll을 자동으로 넘겨버리기..?
+                            ZStack {
+                                // 배경 ScrollView
                                 ScrollView(.horizontal) {
-                                        HStack(spacing: geometry.size.width * 0.07) {
-                                            ForEach(Array(movieService.movies.enumerated()), id: \.element.id) { index, movie in
-                                                NowShowingCardView(recWidth: geometry.size.width * 0.6, recHeight: geometry.size.height * 0.5, movie: movie)
-                                                    .containerRelativeFrame(.horizontal, count: 2, spacing: -70)
-                                                    .scrollTransition { view, phase in
-                                                        return view
-                                                            .opacity(phase.isIdentity ? 1.0 : 0.4)
-                                                            .scaleEffect(phase.isIdentity ? 1.0 : 0.6)
-                                                    }
-                                            }
+                                    HStack {
+                                        ForEach(currentMovie, id: \.self) { backImage in
+                                            BackgroundImageView(backImage: backImage, imageWidth: geometry.size.width, imageHeight: geometry.size.height * 0.6)
                                         }
-                                        .padding(geometry.size.width * 0.05)
+                                    }
+                                }
+                                // 영화 Card ScrollView
+                                ScrollView(.horizontal) {
+                                    HStack(spacing: geometry.size.width * 0.07) {
+                                        ForEach(Array(movieService.movies.enumerated()), id: \.element.id) { index, movie in
+                                            NowShowingCardView(recWidth: geometry.size.width * 0.6, recHeight: geometry.size.height * 0.5, movie: movie)
+                                                .containerRelativeFrame(.horizontal, count: 2, spacing: -30)
+                                                .scrollTransition { view, phase in
+                                                    return view
+                                                        .opacity(phase.isIdentity ? 1.0 : 0.4)
+                                                        .scaleEffect(phase.isIdentity ? 1.0 : 0.6)
+                                                }
+                                            
+                                        }
+                                    }
+                                    .padding(.horizontal, geometry.size.width * 0.232)
+                                    .padding(.vertical)
                                     .scrollTargetLayout()
                                 }
                                 .scrollIndicators(.hidden)
                                 .scrollTargetBehavior(.viewAligned)
+                            }
                             
                             
                             TitleView(semiTitle: "", title: "UP COMING", buttonTitle: "View all")
-                            .padding(.horizontal)
+                                .padding(.horizontal)
                             
                             ScrollView(.horizontal) {
                                 HStack {
@@ -71,7 +70,7 @@ struct HomeView: View {
                             .scrollIndicators(.hidden)
                             
                             TitleView(semiTitle: "", title: "MOVIE RANK", buttonTitle: "View all")
-                            .padding(.horizontal)
+                                .padding(.horizontal)
                             
                             ScrollView(.horizontal) {
                                 HStack {
@@ -85,13 +84,14 @@ struct HomeView: View {
                             Spacer()
                         }
                         .padding(.vertical)
-                    }
+                    
                 }
                 .scrollIndicators(.hidden)
             }
         }
         .task {
             await movieService.loadMovie()
+            currentMovie = movieService.movies.map{ $0.backdropPath ?? "" }
         }
     }
     

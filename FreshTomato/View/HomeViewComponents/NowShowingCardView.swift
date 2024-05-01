@@ -18,7 +18,7 @@ struct NowShowingCardView: View {
             RoundedRectangle(cornerRadius: 20)
                 .frame(width: recWidth, height: recHeight)
                 .foregroundStyle(.white)
-                .opacity(0.6)
+                .opacity(0.7)
                 .shadow(radius: 10)
             VStack {
                 // 포스터 이미지
