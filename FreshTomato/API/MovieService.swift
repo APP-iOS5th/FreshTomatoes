@@ -7,13 +7,15 @@
 import Foundation
 
 protocol MovieService {
-    
-}
+    func fetchMovies(from endpoint: MovieListEndpoint, completion: @escaping (Result<MoviesResponse, MovieError>) -> ())
+        func fetchMovie(id: Int, completion: @escaping (Result<Movie, MovieError>) -> ())
+        func searchMovie(query: String, completion: @escaping (Result<MoviesResponse, MovieError>) -> ())
+    }
 
 enum MovieListEndpoint: String {
-    case boxoffice
+    case boxoffice = "now_playing"
     case upcoming
-    case TopRated
+    case TopRated = "top_rated"
     case pupular
     
     var description: String {
@@ -26,33 +28,46 @@ enum MovieListEndpoint: String {
     }
 }
 
-enum MovieErrer: Error {
-    case apiErrer
+enum MovieError: Error {
+    case apiError
     case invalidEndpoing
     case invalidResponse
     case noData
     case serializationError
-}
-
-func fetchNowPlayingMovies() async {
-    let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing")!
-    var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
-    let queryItems: [URLQueryItem] = [
-        URLQueryItem(name: "language", value: "en-US"),
-        URLQueryItem(name: "page", value: "1"),
-    ]
-    components.queryItems = (components.queryItems ?? []) + queryItems
     
-    var request = URLRequest(url: components.url!)
-    request.httpMethod = "GET"
-    request.timeoutInterval = 10
-    request.allHTTPHeaderFields = ["accept": "application/json"]
-    
-    do {
-        let (data, _) = try await URLSession.shared.data(for: request)
-        print(String(decoding: data, as: UTF8.self))
-    } catch {
-        print(error)
+    var localizedDescription: String {
+        switch self {
+        case .apiError: return "Failed to fetch data"
+        case .invalidEndpoing: return "Invalid endpoint"
+        case .invalidResponse: return "Invalid response"
+        case .noData: return "No data"
+        case .serializationError: return "Failed to decode data"
+        }
+    }
+    var errorUserInfo: [String : Any] {
+        [NSLocalizedDescriptionKey: localizedDescription]
     }
 }
+
+//func fetchNowPlayingMovies() async {
+//    let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing")!
+//    var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
+//    let queryItems: [URLQueryItem] = [
+//        URLQueryItem(name: "language", value: "en-US"),
+//        URLQueryItem(name: "page", value: "1"),
+//    ]
+//    components.queryItems = (components.queryItems ?? []) + queryItems
+//    
+//    var request = URLRequest(url: components.url!)
+//    request.httpMethod = "GET"
+//    request.timeoutInterval = 10
+//    request.allHTTPHeaderFields = ["accept": "application/json"]
+//    
+//    do {
+//        let (data, _) = try await URLSession.shared.data(for: request)
+//        print(String(decoding: data, as: UTF8.self))
+//    } catch {
+//        print(error)
+//    }
+//}
 

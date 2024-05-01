@@ -26,6 +26,8 @@
 		469304CB2BE0D222003BBA13 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469304CA2BE0D222003BBA13 /* HomeViewModel.swift */; };
 		8F32BDD72BE1F93200FB68F6 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469304B22BE0CE58003BBA13 /* MovieService.swift */; };
 		8F32BDD92BE1FEF500FB68F6 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F32BDD82BE1FEF500FB68F6 /* test.swift */; };
+		8F32BDDB2BE2238500FB68F6 /* MovieStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F32BDDA2BE2238500FB68F6 /* MovieStore.swift */; };
+		8F32BDDD2BE225AE00FB68F6 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F32BDDC2BE225AE00FB68F6 /* Decoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		469304C82BE0D119003BBA13 /* ThirdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewModel.swift; sourceTree = "<group>"; };
 		469304CA2BE0D222003BBA13 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		8F32BDD82BE1FEF500FB68F6 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = SOURCE_ROOT; };
+		8F32BDDA2BE2238500FB68F6 /* MovieStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieStore.swift; sourceTree = "<group>"; };
+		8F32BDDC2BE225AE00FB68F6 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				469304B22BE0CE58003BBA13 /* MovieService.swift */,
+				8F32BDDA2BE2238500FB68F6 /* MovieStore.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			children = (
 				469304B42BE0CE69003BBA13 /* Secrets.swift */,
 				469304B62BE0CE74003BBA13 /* BaseURL.swift */,
+				8F32BDDC2BE225AE00FB68F6 /* Decoder.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 				469304AF2BE0CE13003BBA13 /* HomeView.swift in Sources */,
 				8F32BDD92BE1FEF500FB68F6 /* test.swift in Sources */,
 				469304C32BE0D0A8003BBA13 /* ThirdView.swift in Sources */,
+				8F32BDDD2BE225AE00FB68F6 /* Decoder.swift in Sources */,
 				469304B72BE0CE74003BBA13 /* BaseURL.swift in Sources */,
 				469304CB2BE0D222003BBA13 /* HomeViewModel.swift in Sources */,
 				469304B52BE0CE69003BBA13 /* Secrets.swift in Sources */,
@@ -248,6 +255,7 @@
 				469304BD2BE0CFCF003BBA13 /* ViewExtension.swift in Sources */,
 				469304C92BE0D119003BBA13 /* ThirdViewModel.swift in Sources */,
 				4693049C2BE0C50E003BBA13 /* ContentView.swift in Sources */,
+				8F32BDDB2BE2238500FB68F6 /* MovieStore.swift in Sources */,
 				469304C12BE0D09D003BBA13 /* SecondView.swift in Sources */,
 				4693049A2BE0C50E003BBA13 /* FreshTomatoApp.swift in Sources */,
 				469304C52BE0D0D1003BBA13 /* ContentViewModel.swift in Sources */,
