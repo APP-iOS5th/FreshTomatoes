@@ -9,61 +9,53 @@ import SwiftUI
 
 struct CustomTabBarView: View {
     @Binding var currentTab: Tab
-    @State var yOffset: CGFloat = 0
-    
-    private var tabNames: [String] {
-        Tab.allCases.map { $0.rawValue }
-    }
+    @State var yOffset:CGFloat = 0
     
     var body: some View {
-        let geometry = GeometryReader { proxy in
+        GeometryReader { proxy in
             let width = proxy.size.width
-            
             HStack(spacing: 0) {
-                ForEach(Array(zip(Tab.allCases, tabNames)), id: \.0) { tab, name in
-                    VStack(spacing: 4) {
-                        Button {
-                            withAnimation(.easeOut(duration: 0.2)) {
-                                currentTab = tab
-                                yOffset = -40
-                            }
-                            
-                            withAnimation(.easeOut(duration: 0.1).delay(0.07)) {
-                                yOffset = 0
-                            }
-                        } label: {
+                ForEach(Tab.allCases,id: \.self) { tab in
+                    Button {
+                        withAnimation(.easeOut(duration: 0.3)) {
+                            currentTab = tab
+                            yOffset = -50
+                        }
+                        
+                        withAnimation(.easeOut(duration: 0.1).delay(0.07)) {
+                            yOffset = 0
+                        }
+                    } label: {
+                        VStack(spacing: 4) {
                             Image(systemName: getImage(rawValue: tab.rawValue))
                                 .renderingMode(.template)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 20.5, height: 20.5)
+                                .frame(width: 22, height: 22)
+                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                                 .foregroundColor(currentTab == tab ? .indigo : .gray)
                                 .scaleEffect(currentTab == tab ? 1.3 : 1)
                             
+                            Text(tab.rawValue)
+                                .font(.caption)
+                                .foregroundColor(currentTab == tab ? .indigo : .gray)
                         }
-                        
-                        Text(name)
-                            .font(.system(size: 10, weight: .semibold))
-                            .foregroundColor(currentTab == tab ? .indigo : .gray)
                     }
-                    .frame(maxWidth: .infinity)
                 }
             }
             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
             .background(alignment: .leading) {
                 Circle()
-                    .fill(.white)
-                    .frame(width: 55, height: 55)
-                    .offset(x: 17, y: yOffset-1.5)
+                    .fill(Color.white)
+                    .frame(width: 60, height: 60)
+                    .offset(x: 15, y: yOffset-1)
                     .offset(x:indicatorOffset(width: width))
-                    .shadow(color: .indigo, radius: 5)
+                    .shadow(color: .indigo, radius: 7)
             }
         }
-        
-        return geometry
-            .frame(height: 60)
-            .padding(.horizontal)
-            .padding(.top, 10)
+        .frame(height: 70)
+        .padding(.bottom, 10)
+        .padding([.horizontal, .top])
     }
     
     func indicatorOffset(width:CGFloat) -> CGFloat {
