@@ -9,7 +9,16 @@ import SwiftUI
 
 struct FourthView: View {
     var body: some View {
-        Text("FourthView")
+        NavigationStack {
+            List {
+                Section(header: Text("내 목록")) {
+                    
+                    
+                }
+            }
+            .padding()
+            .navigationTitle("My Page")
+        }
     }
 }
 

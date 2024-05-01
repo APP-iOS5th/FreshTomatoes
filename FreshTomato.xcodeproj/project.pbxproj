@@ -25,6 +25,7 @@
 		469304C72BE0D111003BBA13 /* SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469304C62BE0D111003BBA13 /* SecondViewModel.swift */; };
 		469304C92BE0D119003BBA13 /* ThirdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469304C82BE0D119003BBA13 /* ThirdViewModel.swift */; };
 		469304CB2BE0D222003BBA13 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469304CA2BE0D222003BBA13 /* HomeViewModel.swift */; };
+		CBA582DB2BE234C8006A065B /* BookmarksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA582DA2BE234C8006A065B /* BookmarksView.swift */; };
 		CBD00C742BE1C7AB00C3B271 /* FourthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD00C732BE1C7AB00C3B271 /* FourthView.swift */; };
 		CBD00C772BE1D44B00C3B271 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD00C762BE1D44B00C3B271 /* CustomTabBarView.swift */; };
 		CBD00C792BE1D47A00C3B271 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD00C782BE1D47A00C3B271 /* Helper.swift */; };
@@ -50,6 +51,7 @@
 		469304C62BE0D111003BBA13 /* SecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewModel.swift; sourceTree = "<group>"; };
 		469304C82BE0D119003BBA13 /* ThirdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewModel.swift; sourceTree = "<group>"; };
 		469304CA2BE0D222003BBA13 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CBA582DA2BE234C8006A065B /* BookmarksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksView.swift; sourceTree = "<group>"; };
 		CBD00C732BE1C7AB00C3B271 /* FourthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthView.swift; sourceTree = "<group>"; };
 		CBD00C762BE1D44B00C3B271 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		CBD00C782BE1D47A00C3B271 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				CBD00C752BE1D40400C3B271 /* CustomTabBar */,
 				469304A72BE0CDA2003BBA13 /* View */,
+				CBA582D92BE233CC006A065B /* BookmarksList */,
 				469304AB2BE0CDDA003BBA13 /* Utils */,
 				469304AA2BE0CDD1003BBA13 /* Model */,
 				469304A82BE0CDAC003BBA13 /* ViewModel */,
@@ -171,6 +174,14 @@
 				4693049D2BE0C511003BBA13 /* Assets.xcassets */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		CBA582D92BE233CC006A065B /* BookmarksList */ = {
+			isa = PBXGroup;
+			children = (
+				CBA582DA2BE234C8006A065B /* BookmarksView.swift */,
+			);
+			path = BookmarksList;
 			sourceTree = "<group>";
 		};
 		CBD00C752BE1D40400C3B271 /* CustomTabBar */ = {
@@ -262,6 +273,7 @@
 				469304C92BE0D119003BBA13 /* ThirdViewModel.swift in Sources */,
 				CBD00C792BE1D47A00C3B271 /* Helper.swift in Sources */,
 				4693049C2BE0C50E003BBA13 /* ContentView.swift in Sources */,
+				CBA582DB2BE234C8006A065B /* BookmarksView.swift in Sources */,
 				CBD00C772BE1D44B00C3B271 /* CustomTabBarView.swift in Sources */,
 				469304C12BE0D09D003BBA13 /* SecondView.swift in Sources */,
 				4693049A2BE0C50E003BBA13 /* FreshTomatoApp.swift in Sources */,

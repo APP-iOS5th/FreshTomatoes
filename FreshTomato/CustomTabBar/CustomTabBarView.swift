@@ -48,7 +48,7 @@ struct CustomTabBarView: View {
                 Circle()
                     .fill(Color.white)
                     .frame(width: 60, height: 60)
-                    .offset(x: 15, y: yOffset-1)
+                    .offset(x: 15, y: yOffset-1.5)
                     .offset(x:indicatorOffset(width: width))
                     .shadow(color: .indigo, radius: 7)
             }
