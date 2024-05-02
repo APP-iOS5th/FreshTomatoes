@@ -49,19 +49,20 @@ struct RatingView: View {
     }
 }
 
-struct RatingView_Previews: PreviewProvider {
-    static var previews: some View {
-        RatingViewPreview()
-    }
-    
-    struct RatingViewPreview: View {
-        @State private var rating = 0
-        
-        var body: some View {
-            RatingView(rating: $rating)
-        }
-    }
-}
-//#Preview {
-//    RatingView(rating: .constant(3))
+//struct RatingView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RatingViewPreview()
+//    }
+//    
+//    struct RatingViewPreview: View {
+//        @State private var rating = 0
+//        
+//        var body: some View {
+//            RatingView(rating: $rating)
+//        }
+//    }
 //}
+
+#Preview {
+    RatingView(rating: .constant(3))
+}
