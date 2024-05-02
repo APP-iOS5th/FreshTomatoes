@@ -15,6 +15,10 @@ struct FourthView: View {
                     
                     
                 }
+                
+                Section(header: Text("나의 평점")) {
+                    
+                }
             }
             .padding()
             .navigationTitle("My Page")
