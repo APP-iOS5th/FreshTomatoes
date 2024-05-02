@@ -25,4 +25,3 @@ struct MovieResponse: Codable {
     let results: [MyMovie]
 }
 
-enum .. 뭐시기 있었는데
