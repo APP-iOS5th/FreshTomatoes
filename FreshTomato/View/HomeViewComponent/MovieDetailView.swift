@@ -52,6 +52,15 @@ struct MovieDetailView: View {
                             .fontWeight(.bold)
                         Spacer()
                         Button(action: {
+                            // UserDefaults 구현
+                            let id =  movie.id
+                            let title = movie.title
+                            let description = movie.overview
+                            let url = movie.backdrop_path
+                           
+                            let movieInfo = Item(id: id, images: url ?? "pencil", name: title, description: description)
+                            
+                            StorageManager.shared.addItem(movieInfo)
                             print("Like button clicked.")
                         }) {
                             Image(systemName: "heart")
