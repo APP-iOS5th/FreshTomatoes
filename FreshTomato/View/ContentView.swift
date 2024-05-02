@@ -9,30 +9,46 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        TabView {
-           HomeView()
-                .tabItem {
-                    Image(systemName: "heart.fill")
-                                       Text("One")
+    
+    init(){
+        UITabBar.appearance().isHidden = true
+    }
+    
+    @State private var currentTab: Tab = .home
+    
+        var body: some View {
+            VStack(spacing: 0) {
+                TabView(selection: $currentTab) {
+                    HomeView()
+                        .tag(Tab.home)
+                    SecondView()
+                        .tag(Tab.nowandupcoming)
+                    ThirdView()
+                        .tag(Tab.rankings)
+                    FourthView()
+                        .tag(Tab.my)
                 }
-           SecondView()
-                .tabItem {
-                    Image(systemName: "heart.fill")
-                         Text("Two")
-                }
-           ThirdView()
-                .tabItem {
-                    Image(systemName: "heart.fill")
-                         Text("Three")
-                }
-           
+    
+                CustomTabBarView(currentTab: $currentTab)
+            }
         }
-       // .tabViewStyle(.page)
-                   .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+    }
+    
+//    var body: some View {
+//        VStack(spacing: 0) {
+//            TabView(selection: $currentTab) {
+//                Text(currentTab.rawValue)
+//                    .applyBG()
+//                    .tag(Tab.home)
+//            }
+//            CustomTabBarView(currentTab: $currentTab)
+//        }
+//        
+//    }
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }
 
-#Preview {
-    ContentView()
-}
