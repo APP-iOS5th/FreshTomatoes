@@ -15,16 +15,23 @@ struct Movie: Identifiable, Codable,Hashable{
     let id: Int
     let title: String
     let backdrop_path: String?
+    let poster_path: String?
     let overview: String
     let genre_ids: [Int]
-    let release_date: String
     let vote_average: Double
-   // let runningtime: String
+
     
     var backdropURL: URL? {
         guard let backdropPath = backdrop_path else { return nil }
         return URL(string: "https://image.tmdb.org/t/p/w500\(backdropPath)")
     }
+    
+    var posterURL: URL? {
+        guard let posterPath = poster_path else { return nil }
+        return URL(string: "https://image.tmdb.org/t/p/w500\(posterPath)")
+    }
+    
+    
 }
 
 
