@@ -8,30 +8,65 @@
 import SwiftUI
 
 struct FourthView: View {
-    
-   
+    @StateObject private var viewModel = FourthViewModel()
 
-    
     var body: some View {
-        NavigationStack {
+        NavigationView {
             List {
-                Section(header: Text("나의 목록")) {
-                   
-                    
-                    
-                    
+                ForEach(viewModel.items, id: \.id) { item in
+                    VStack(alignment: .leading) {
+                        Text(item.name)
+                            .font(.headline)
+                        Text(item.description)
+                            .font(.subheadline)
+                        Text(item.images)
+                            .font(.caption)
+                    }
                 }
-                
-                Section(header: Text("나의 평점")) {
-                    
-                }
+                .onDelete(perform: deleteItems)
             }
-            .padding()
-            .navigationTitle("My Page")
+            .task {
+                viewModel.loadItems()
+            }
+            .navigationTitle("Saved Items")
+            
+        }
+    }
+
+    private func deleteItems(at offsets: IndexSet) {
+        offsets.forEach { index in
+            let itemID = viewModel.items[index].id
+            viewModel.deleteItem(withID: itemID)
         }
     }
 }
 
-#Preview {
-    FourthView()
-}
+
+//struct FourthView: View {
+//    
+//   
+//
+//    
+//    var body: some View {
+//        NavigationStack {
+//            List {
+//                Section(header: Text("나의 목록")) {
+//                   
+//                    
+//                    
+//                    
+//                }
+//                
+//                Section(header: Text("나의 평점")) {
+//                    
+//                }
+//            }
+//            .padding()
+//            .navigationTitle("My Page")
+//        }
+//    }
+//}
+//
+//#Preview {
+//    FourthView()
+//}
