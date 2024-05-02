@@ -8,29 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var movies: [Movie] = []
+    @ObservedObject var movieViewModel = NowPlayingMoviesViewModel()
     
     var body: some View {
-        List(movies, id: \.id) { movie in
-            Text(movie.title)
-        }
-        .onAppear {
-            fetchNowPlayingMovies()
-        }
-    }
-    
-    func fetchNowPlayingMovies() {
-        Task {
-            do {
-                let moviesData = try await getNowPlayingMovies()
-                movies = moviesData.results
-            } catch {
-                print(error)
+        NavigationView {
+            List(movieViewModel.nowplayingmovies) { movie in
+                Text(movie.title)
             }
+            .navigationTitle("Movies")
         }
     }
-    
 }
+
 
 #Preview {
     ContentView()

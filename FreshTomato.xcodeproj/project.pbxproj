@@ -27,7 +27,6 @@
 		8F32BDD72BE1F93200FB68F6 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469304B22BE0CE58003BBA13 /* MovieService.swift */; };
 		8F32BDD92BE1FEF500FB68F6 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F32BDD82BE1FEF500FB68F6 /* test.swift */; };
 		8F32BDDB2BE2238500FB68F6 /* MovieStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F32BDDA2BE2238500FB68F6 /* MovieStore.swift */; };
-		8F32BDDD2BE225AE00FB68F6 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F32BDDC2BE225AE00FB68F6 /* Decoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +51,6 @@
 		469304CA2BE0D222003BBA13 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		8F32BDD82BE1FEF500FB68F6 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = SOURCE_ROOT; };
 		8F32BDDA2BE2238500FB68F6 /* MovieStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieStore.swift; sourceTree = "<group>"; };
-		8F32BDDC2BE225AE00FB68F6 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +148,6 @@
 			children = (
 				469304B42BE0CE69003BBA13 /* Secrets.swift */,
 				469304B62BE0CE74003BBA13 /* BaseURL.swift */,
-				8F32BDDC2BE225AE00FB68F6 /* Decoder.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -247,7 +244,6 @@
 				469304AF2BE0CE13003BBA13 /* HomeView.swift in Sources */,
 				8F32BDD92BE1FEF500FB68F6 /* test.swift in Sources */,
 				469304C32BE0D0A8003BBA13 /* ThirdView.swift in Sources */,
-				8F32BDDD2BE225AE00FB68F6 /* Decoder.swift in Sources */,
 				469304B72BE0CE74003BBA13 /* BaseURL.swift in Sources */,
 				469304CB2BE0D222003BBA13 /* HomeViewModel.swift in Sources */,
 				469304B52BE0CE69003BBA13 /* Secrets.swift in Sources */,
@@ -321,7 +317,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -378,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -404,6 +400,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -433,6 +430,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
