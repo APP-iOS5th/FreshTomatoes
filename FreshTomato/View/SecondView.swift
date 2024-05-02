@@ -12,7 +12,7 @@ struct SecondView: View {
         Text("SecondView")
     }
 }
-
+//print("hi)
 #Preview {
     SecondView()
 }
