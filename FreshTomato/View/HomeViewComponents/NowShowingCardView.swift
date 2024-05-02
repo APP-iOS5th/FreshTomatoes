@@ -24,8 +24,8 @@ struct NowShowingCardView: View {
                 // 포스터 이미지
                 AsyncImage(url: movie.posterURL) { image in
                     image.resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: recHeight * 0.54)
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: recWidth * 0.89, height: recHeight * 0.84)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                 } placeholder: {
                     ProgressView()

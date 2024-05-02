@@ -15,16 +15,22 @@ import Foundation
 
 
 class MovieService {
+    
+    enum boxOfficeStatus: String {
+        case nowPlaying = "now_playing"
+        case upComing = "upcoming"
+        case rank = "top_rated"
+    }
 
     static let shared = MovieService()
-    private let baseURL1 = "https://api.themoviedb.org/3/movie/now_playing"
+//    private let baseURL1 = "https://api.themoviedb.org/3/movie/now_playing"
     private let apiKey = "7f20d823d0156ecf01791f1da2f595d1"
     
 //    private init() {}
 
     
-    func fetchNowPlayingMovies(language: String, page: Int, region: String, completion: @escaping (Result<[Movie], Error>) -> Void) {
-        let urlString = "\(baseURL1)?api_key=\(apiKey)&language=\(language)&page=\(page)&region=\(region)"
+    func fetchNowPlayingMovies(boxOfficeStatus: boxOfficeStatus, language: String, page: Int, region: String, completion: @escaping (Result<[Movie], Error>) -> Void) {
+        let urlString = "https://api.themoviedb.org/3/movie/\(boxOfficeStatus.rawValue)?api_key=\(apiKey)&language=\(language)&page=\(page)&region=\(region)"
         
         guard let url = URL(string: urlString) else {
             completion(.failure(NSError(domain: "Invalid URL", code: 0, userInfo: nil)))
@@ -69,7 +75,7 @@ class MovieService {
 
         for page in pages {
             dispatchGroup.enter()
-            fetchNowPlayingMovies(language: language, page: page, region: region) { result in
+            fetchNowPlayingMovies(boxOfficeStatus: .nowPlaying, language: language, page: page, region: region) { result in
                 switch result {
                 case .success(let movies):
                     allMovies.append(contentsOf: movies)

@@ -53,7 +53,7 @@ import Foundation
 //}
 
 // MARK: - API 통신으로 데이터 가져와서 저장하는 구조체
-struct Movie: Identifiable, Codable,Hashable{
+struct Movie: Identifiable, Codable, Hashable{
     let id: Int
     let title: String
     let backdrop_path: String?

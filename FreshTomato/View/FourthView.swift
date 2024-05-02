@@ -8,20 +8,31 @@
 import SwiftUI
 
 struct FourthView: View {
+    
+    @StateObject var homeVm = HomeViewModel()
+    
     var body: some View {
         NavigationStack {
-            List {
-                Section(header: Text("나의 목록")) {
-                    
-                    
-                }
-                
-                Section(header: Text("나의 평점")) {
-                    
+            VStack {
+                ForEach(homeVm.storageMovies, id: \.self) { movie in
+                    Text(movie.title)
                 }
             }
-            .padding()
-            .navigationTitle("My Page")
+//            List {
+//                Section(header: Text("나의 목록")) {
+//                    
+//                    
+//                }
+//                
+//                Section(header: Text("나의 평점")) {
+//                    
+//                }
+//            }
+//            .padding()
+//            .navigationTitle("My Page")
+        }
+        .onAppear {
+            homeVm.getStorage()
         }
     }
 }

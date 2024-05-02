@@ -9,7 +9,6 @@ import SwiftUI
 import Combine
 
 struct HomeView: View {
-    //    @StateObject var movieService: MovieService = MovieService()
     @StateObject var homeVM: HomeViewModel = HomeViewModel()
     
     @State var movies: [Movie] = []
@@ -42,6 +41,7 @@ struct HomeView: View {
                                                 }
                                                 .foregroundStyle(.black)
                                         }
+                                        
                                     }
                                 }
                                 .padding(.horizontal, geometry.size.width * 0.232)
@@ -57,9 +57,12 @@ struct HomeView: View {
                         
                         ScrollView(.horizontal) {
                             HStack {
-                                ForEach(homeVM.movies, id: \.id) { movie in
+                                ForEach(homeVM.upComingMoives, id: \.id) { movie in
                                     NavigationLink(destination: MovieDetailView(movie: movie, imageWidth: geometry.size.width, imageHeight: geometry.size.height * 0.4)){
                                         MovieCard(movie: movie, recWidth: geometry.size.width * 0.37, recHeight: geometry.size.height * 0.3, imageType: "Poster")
+//                                        .onTapGesture {
+//                                            homeVM.setStorage(movie: movie)
+//                                        }
                                     }
                                 }
                             }
@@ -89,13 +92,9 @@ struct HomeView: View {
                 .scrollIndicators(.hidden)
             }
         }
-        .task {
+        .onAppear {
             homeVM.fetchNowPlayingMovies(pages: 1)
-            //            await movieService.loadMovie()
-            //            await movieService.load(boxOfficeStatus: .nowPlaying)
-            //            await movieService.load(boxOfficeStatus: .upComing)
-            //            await movieService.load(boxOfficeStatus: .rank)
-            //            currentMovie = movieService.movies.map{ $0.backdropPath ?? "" }
+            homeVM.fetchUpComingMovies(pages: 1)
         }
     }
     
@@ -108,65 +107,3 @@ struct HomeView: View {
 //}
 
 
-//struct MoviDetailView: View {
-//    var movie: Movie
-//
-//    var imageWidth: CGFloat
-//    var imageHeight: CGFloat
-//
-//    var body: some View {
-//        VStack(spacing: 0) {
-//            ZStack(alignment: .bottomLeading) {
-//                AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/original\(movie.backdropPath ?? "")")) { image in
-//                    image
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fill)
-//                        .opacity(0.7)
-//                        .frame(width: imageWidth, height: imageHeight)
-//                        .ignoresSafeArea()
-//                } placeholder: {
-//                    ProgressView()
-//                        .frame(width: imageWidth, height: imageHeight)
-//                }
-//                    VStack(alignment: .leading) {
-//                        Text(movie.title)
-//                        Text("장르번호 : \(movie.genreIds)")
-//                    }
-//                    .fontWeight(.bold)
-//                    .font(.title)
-//                    .padding()
-//                    .padding(.bottom, imageWidth * 0.3)
-//            }
-//            ZStack(alignment: .top) {
-//                RoundedRectangle(cornerRadius: 20)
-//                    .foregroundStyle(.white)
-//                VStack(alignment: .trailing, spacing: 0) {
-//                    HStack {
-//                        Image(systemName: "heart")
-//                            .font(.system(size: imageWidth * 0.06))
-//                            .padding(.trailing)
-//                            .foregroundStyle(.clear)
-//                            .disabled(true)
-//                        Spacer()
-//                        Text("Overview")
-//                            .font(.title2)
-//                            .fontWeight(.bold)
-//                        Spacer()
-//                        Button(action: {
-//                            print("Like button clicked.")
-//                        }) {
-//                            Image(systemName: "heart")
-//                                                            .font(.system(size: imageWidth * 0.06))
-//                                                            .padding(.trailing)
-//                                                    }
-//                                                }
-//                                                Text(movie.overview)
-//                                                    .font(.title3)
-//                                                    .padding()
-//                                            }
-//                                            .padding(.vertical)
-//                                        }
-//                                        .padding(.top, imageWidth * -0.3)
-//                                    }
-//                                }
-//                            }

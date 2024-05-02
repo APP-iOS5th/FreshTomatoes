@@ -52,7 +52,7 @@ struct SecondView: View {
         
         for page in pages {
             group.enter()
-            MovieService.shared.fetchNowPlayingMovies(language: "ko-KR", page: page, region: "KR") { result in
+            MovieService.shared.fetchNowPlayingMovies(boxOfficeStatus: .nowPlaying, language: "ko-KR", page: page, region: "KR") { result in
                 defer { group.leave() }
                 switch result {
                 case .success(let movies):
@@ -76,7 +76,7 @@ struct SecondView: View {
     //MARK: - Movie 에서 가져온 장르 번호 바탕으로 필터 하는 함수
     func fetchNowPlayingMovies(pages:Int) {
         isLoading = true
-        MovieService.shared.fetchNowPlayingMovies(language: "ko-KR", page: pages, region: "KR") { result in
+        MovieService.shared.fetchNowPlayingMovies(boxOfficeStatus: .nowPlaying, language: "ko-KR", page: pages, region: "KR") { result in
             switch result {
             case .success(let movies):
                 DispatchQueue.main.async {
