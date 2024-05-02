@@ -25,11 +25,11 @@
 		469304C72BE0D111003BBA13 /* SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469304C62BE0D111003BBA13 /* SecondViewModel.swift */; };
 		469304C92BE0D119003BBA13 /* ThirdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469304C82BE0D119003BBA13 /* ThirdViewModel.swift */; };
 		469304CB2BE0D222003BBA13 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469304CA2BE0D222003BBA13 /* HomeViewModel.swift */; };
-		580E07022BE3B4BE0042375A /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580E06FD2BE3B4BE0042375A /* BackgroundImageView.swift */; };
 		580E07032BE3B4BE0042375A /* MovieCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580E06FE2BE3B4BE0042375A /* MovieCard.swift */; };
 		580E07042BE3B4BE0042375A /* NowShowingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580E06FF2BE3B4BE0042375A /* NowShowingCardView.swift */; };
 		580E07052BE3B4BE0042375A /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580E07002BE3B4BE0042375A /* TitleView.swift */; };
 		580E07072BE3B4F20042375A /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580E07062BE3B4F20042375A /* MovieDetailView.swift */; };
+		580E07092BE3EF0E0042375A /* ViewAllCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580E07082BE3EF0E0042375A /* ViewAllCardView.swift */; };
 		CB6648CF2BE33476008DA78F /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6648CE2BE33476008DA78F /* RatingView.swift */; };
 		CBD00C742BE1C7AB00C3B271 /* FourthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD00C732BE1C7AB00C3B271 /* FourthView.swift */; };
 		CBD00C772BE1D44B00C3B271 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD00C762BE1D44B00C3B271 /* CustomTabBarView.swift */; };
@@ -56,11 +56,11 @@
 		469304C62BE0D111003BBA13 /* SecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewModel.swift; sourceTree = "<group>"; };
 		469304C82BE0D119003BBA13 /* ThirdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewModel.swift; sourceTree = "<group>"; };
 		469304CA2BE0D222003BBA13 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		580E06FD2BE3B4BE0042375A /* BackgroundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
 		580E06FE2BE3B4BE0042375A /* MovieCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCard.swift; sourceTree = "<group>"; };
 		580E06FF2BE3B4BE0042375A /* NowShowingCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowShowingCardView.swift; sourceTree = "<group>"; };
 		580E07002BE3B4BE0042375A /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		580E07062BE3B4F20042375A /* MovieDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieDetailView.swift; path = FreshTomato/View/MovieDetailView.swift; sourceTree = SOURCE_ROOT; };
+		580E07082BE3EF0E0042375A /* ViewAllCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllCardView.swift; sourceTree = "<group>"; };
 		CB6648CE2BE33476008DA78F /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		CBD00C732BE1C7AB00C3B271 /* FourthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthView.swift; sourceTree = "<group>"; };
 		CBD00C762BE1D44B00C3B271 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
@@ -191,10 +191,10 @@
 			isa = PBXGroup;
 			children = (
 				580E07062BE3B4F20042375A /* MovieDetailView.swift */,
-				580E06FD2BE3B4BE0042375A /* BackgroundImageView.swift */,
 				580E06FE2BE3B4BE0042375A /* MovieCard.swift */,
 				580E06FF2BE3B4BE0042375A /* NowShowingCardView.swift */,
 				580E07002BE3B4BE0042375A /* TitleView.swift */,
+				580E07082BE3EF0E0042375A /* ViewAllCardView.swift */,
 			);
 			path = HomeViewComponents;
 			sourceTree = "<group>";
@@ -289,12 +289,12 @@
 				469304BD2BE0CFCF003BBA13 /* ViewExtension.swift in Sources */,
 				469304C92BE0D119003BBA13 /* ThirdViewModel.swift in Sources */,
 				CBD00C792BE1D47A00C3B271 /* Helper.swift in Sources */,
+				580E07092BE3EF0E0042375A /* ViewAllCardView.swift in Sources */,
 				4693049C2BE0C50E003BBA13 /* ContentView.swift in Sources */,
 				CBD00C772BE1D44B00C3B271 /* CustomTabBarView.swift in Sources */,
 				469304C12BE0D09D003BBA13 /* SecondView.swift in Sources */,
 				4693049A2BE0C50E003BBA13 /* FreshTomatoApp.swift in Sources */,
 				469304C52BE0D0D1003BBA13 /* ContentViewModel.swift in Sources */,
-				580E07022BE3B4BE0042375A /* BackgroundImageView.swift in Sources */,
 				469304B92BE0CFAD003BBA13 /* Movie.swift in Sources */,
 				469304BF2BE0CFDC003BBA13 /* ImageExtension.swift in Sources */,
 				469304C72BE0D111003BBA13 /* SecondViewModel.swift in Sources */,

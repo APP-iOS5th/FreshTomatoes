@@ -23,7 +23,7 @@ class MovieService {
     }
 
     static let shared = MovieService()
-//    private let baseURL1 = "https://api.themoviedb.org/3/movie/now_playing"
+//    private let baseURL1 = "https://api.themoviedb.org/3/movie/now_playing?api_key="
     private let apiKey = "7f20d823d0156ecf01791f1da2f595d1"
     
 //    private init() {}

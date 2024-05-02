@@ -11,14 +11,12 @@ import Combine
 struct HomeView: View {
     @StateObject var homeVM: HomeViewModel = HomeViewModel()
     
-    @State var movies: [Movie] = []
-    
     var body: some View {
         GeometryReader { geometry in
             NavigationStack {
                 ScrollView {
                     VStack {
-                        TitleView(semiTitle: "Fresh Tomatoes", title: "NOW SHOWING", buttonTitle: "View all")
+                        TitleView(semiTitle: "Fresh Tomatoes", title: "NOW SHOWING", buttonTitle: "View all", movies: homeVM.movies, allViewImageWidth: geometry.size.width * 0.27, allViewImageHeight: geometry.size.height * 0.21, detailViewWidth: geometry.size.width, detailViewHeight: geometry.size.height * 0.4)
                             .padding(.horizontal)
                         ZStack {
                             Image("cinemaImage")
@@ -52,12 +50,12 @@ struct HomeView: View {
                             .scrollTargetBehavior(.viewAligned)
                         }
                         
-                        TitleView(semiTitle: "", title: "UP COMING", buttonTitle: "View all")
+                        TitleView(semiTitle: "", title: "UP COMING", buttonTitle: "View all", movies: homeVM.upComingMovies, allViewImageWidth: geometry.size.width * 0.27, allViewImageHeight: geometry.size.height * 0.21, detailViewWidth: geometry.size.width, detailViewHeight: geometry.size.height * 0.4)
                             .padding(.horizontal)
                         
                         ScrollView(.horizontal) {
                             HStack {
-                                ForEach(homeVM.upComingMoives, id: \.id) { movie in
+                                ForEach(homeVM.upComingMovies, id: \.id) { movie in
                                     NavigationLink(destination: MovieDetailView(movie: movie, imageWidth: geometry.size.width, imageHeight: geometry.size.height * 0.4)){
                                         MovieCard(movie: movie, recWidth: geometry.size.width * 0.37, recHeight: geometry.size.height * 0.3, imageType: "Poster")
 //                                        .onTapGesture {
@@ -70,7 +68,7 @@ struct HomeView: View {
                         }
                         .scrollIndicators(.hidden)
                         
-                        TitleView(semiTitle: "", title: "OVERALL MOVIE RANKING", buttonTitle: "View all")
+                        TitleView(semiTitle: "", title: "OVERALL MOVIE RANKING", buttonTitle: "View all", movies: homeVM.upComingMovies, allViewImageWidth: geometry.size.width * 0.27, allViewImageHeight: geometry.size.height * 0.21, detailViewWidth: geometry.size.width, detailViewHeight: geometry.size.height * 0.4)
                             .padding(.horizontal)
                         
                         ScrollView(.horizontal) {
