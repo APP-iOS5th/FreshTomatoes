@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46008EA32BE3A6BF00AC249C /* HomeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46008EA22BE3A6BF00AC249C /* HomeDetailView.swift */; };
+		46008EA82BE454A700AC249C /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46008EA72BE454A700AC249C /* GridView.swift */; };
+		46008EAA2BE454D500AC249C /* TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46008EA92BE454D500AC249C /* TagButton.swift */; };
 		4693049A2BE0C50E003BBA13 /* FreshTomatoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469304992BE0C50E003BBA13 /* FreshTomatoApp.swift */; };
 		4693049C2BE0C50E003BBA13 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693049B2BE0C50E003BBA13 /* ContentView.swift */; };
 		4693049E2BE0C511003BBA13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4693049D2BE0C511003BBA13 /* Assets.xcassets */; };
@@ -33,6 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46008EA22BE3A6BF00AC249C /* HomeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailView.swift; sourceTree = "<group>"; };
+		46008EA72BE454A700AC249C /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		46008EA92BE454D500AC249C /* TagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButton.swift; sourceTree = "<group>"; };
 		469304962BE0C50E003BBA13 /* FreshTomato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshTomato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469304992BE0C50E003BBA13 /* FreshTomatoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshTomatoApp.swift; sourceTree = "<group>"; };
 		4693049B2BE0C50E003BBA13 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +76,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46008EA62BE4549300AC249C /* CategorieViewComponent */ = {
+			isa = PBXGroup;
+			children = (
+				46008EA72BE454A700AC249C /* GridView.swift */,
+				46008EA92BE454D500AC249C /* TagButton.swift */,
+				469304C02BE0D09D003BBA13 /* SecondView.swift */,
+			);
+			path = CategorieViewComponent;
+			sourceTree = "<group>";
+		};
+		46008EAB2BE4559000AC249C /* HomeViewComponent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeViewComponent;
+			sourceTree = "<group>";
+		};
 		4693048D2BE0C50E003BBA13 = {
 			isa = PBXGroup;
 			children = (
@@ -114,12 +137,14 @@
 		469304A72BE0CDA2003BBA13 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				46008EAB2BE4559000AC249C /* HomeViewComponent */,
+				46008EA62BE4549300AC249C /* CategorieViewComponent */,
 				4693049B2BE0C50E003BBA13 /* ContentView.swift */,
 				469304AE2BE0CE13003BBA13 /* HomeView.swift */,
-				469304C02BE0D09D003BBA13 /* SecondView.swift */,
 				469304C22BE0D0A8003BBA13 /* ThirdView.swift */,
 				CBD00C732BE1C7AB00C3B271 /* FourthView.swift */,
 				CB6648CE2BE33476008DA78F /* RatingView.swift */,
+				46008EA22BE3A6BF00AC249C /* HomeDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -270,12 +295,11 @@
 				469304C32BE0D0A8003BBA13 /* ThirdView.swift in Sources */,
 				469304B72BE0CE74003BBA13 /* BaseURL.swift in Sources */,
 				469304CB2BE0D222003BBA13 /* HomeViewModel.swift in Sources */,
-				580E06F82BE35F3C0042375A /* MoviDetailView.swift in Sources */,
+				46008EA82BE454A700AC249C /* GridView.swift in Sources */,
 				469304B52BE0CE69003BBA13 /* Secrets.swift in Sources */,
 				469304BB2BE0CFC2003BBA13 /* ColorExtension.swift in Sources */,
 				CB6648CF2BE33476008DA78F /* RatingView.swift in Sources */,
 				469304BD2BE0CFCF003BBA13 /* ViewExtension.swift in Sources */,
-				581C6FAE2BE1DD20004060FE /* MovieCard.swift in Sources */,
 				469304C92BE0D119003BBA13 /* ThirdViewModel.swift in Sources */,
 				CBD00C792BE1D47A00C3B271 /* Helper.swift in Sources */,
 				4693049C2BE0C50E003BBA13 /* ContentView.swift in Sources */,
@@ -283,12 +307,13 @@
 				469304C12BE0D09D003BBA13 /* SecondView.swift in Sources */,
 				4693049A2BE0C50E003BBA13 /* FreshTomatoApp.swift in Sources */,
 				469304C52BE0D0D1003BBA13 /* ContentViewModel.swift in Sources */,
-				581C6FB02BE1E12E004060FE /* TitleView.swift in Sources */,
 				469304B92BE0CFAD003BBA13 /* Movie.swift in Sources */,
 				469304BF2BE0CFDC003BBA13 /* ImageExtension.swift in Sources */,
+				46008EAA2BE454D500AC249C /* TagButton.swift in Sources */,
 				469304C72BE0D111003BBA13 /* SecondViewModel.swift in Sources */,
 				CB31347C2BE379AB0046AC6B /* MyMovie.swift in Sources */,
 				CBD00C742BE1C7AB00C3B271 /* FourthView.swift in Sources */,
+				46008EA32BE3A6BF00AC249C /* HomeDetailView.swift in Sources */,
 				469304B32BE0CE58003BBA13 /* MovieService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
