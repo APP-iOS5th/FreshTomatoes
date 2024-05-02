@@ -11,7 +11,7 @@ struct FourthView: View {
     var body: some View {
         NavigationStack {
             List {
-                Section(header: Text("내 목록")) {
+                Section(header: Text("나의 목록")) {
                     
                     
                 }

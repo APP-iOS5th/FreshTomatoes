@@ -5,6 +5,8 @@
 //  Created by Jude Song on 5/2/24.
 //
 
+//상세 페이지에 들어가기
+
 import SwiftUI
 
 struct RatingView: View {
@@ -21,7 +23,7 @@ struct RatingView: View {
     
     var body: some View {
         HStack {
-            if !label.isEmpty == false {
+            if !label.isEmpty {
                 Text(label)
             }
             
