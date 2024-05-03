@@ -48,7 +48,7 @@ class NowPlayingMoviesViewModel: ObservableObject {
         //
         cancellable = URLSession.shared.dataTaskPublisher(for: request)
                     .map{$0.data}
-                    .decode(type: MoviesResponse.self, decoder: JSONDecoder())
+                    .decode(type: MovieResponse.self, decoder: JSONDecoder())
                     .map{$0.results}
                     .replaceError(with: [])
                     .receive(on: DispatchQueue.main)
