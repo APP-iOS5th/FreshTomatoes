@@ -61,10 +61,11 @@ struct MovieDetailView: View {
                                                     let movieTitle = movie.title
                                                     let movieOverview = movie.overview
                                                     let movieID = movie.id
-                                                    let movieImages = movie.backdrop_path!
+                                                    let movieImages = movie.backdropURL
+                                                    let rated = movie.vote_average
+                                                 
+                                                  let item = Item(id: movieID, images: movieImages, name: movieTitle, description: movieOverview)
                                                     
-                                                    
-                                                    let item = Item(id: movieID, images: movieImages, name: movieTitle, description: movieOverview)
                                                     
                                                     StorageManager.shared.addItem(item)
                                                     
