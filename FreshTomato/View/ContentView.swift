@@ -14,12 +14,12 @@ struct ContentView: View {
         UITabBar.appearance().isHidden = true
     }
     
-    @State private var currentTab: Tab = .home
+    @State var currentTab: Tab = .home
     
         var body: some View {
             VStack(spacing: 0) {
                 TabView(selection: $currentTab) {
-                    HomeView()
+                    HomeView(currentTab: $currentTab)
                         .tag(Tab.home)
                     SecondView()
                         .tag(Tab.nowandupcoming)

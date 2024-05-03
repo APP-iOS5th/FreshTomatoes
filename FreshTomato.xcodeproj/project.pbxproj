@@ -59,7 +59,7 @@
 		580E06FE2BE3B4BE0042375A /* MovieCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCard.swift; sourceTree = "<group>"; };
 		580E06FF2BE3B4BE0042375A /* NowShowingCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowShowingCardView.swift; sourceTree = "<group>"; };
 		580E07002BE3B4BE0042375A /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
-		580E07062BE3B4F20042375A /* MovieDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieDetailView.swift; path = FreshTomato/View/MovieDetailView.swift; sourceTree = SOURCE_ROOT; };
+		580E07062BE3B4F20042375A /* MovieDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieDetailView.swift; path = FreshTomato/View/HomeViewComponents/MovieDetailView.swift; sourceTree = SOURCE_ROOT; };
 		580E07082BE3EF0E0042375A /* ViewAllCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllCardView.swift; sourceTree = "<group>"; };
 		CB6648CE2BE33476008DA78F /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		CBD00C732BE1C7AB00C3B271 /* FourthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthView.swift; sourceTree = "<group>"; };
@@ -190,11 +190,11 @@
 		580E07012BE3B4BE0042375A /* HomeViewComponents */ = {
 			isa = PBXGroup;
 			children = (
-				580E07062BE3B4F20042375A /* MovieDetailView.swift */,
 				580E06FE2BE3B4BE0042375A /* MovieCard.swift */,
 				580E06FF2BE3B4BE0042375A /* NowShowingCardView.swift */,
 				580E07002BE3B4BE0042375A /* TitleView.swift */,
 				580E07082BE3EF0E0042375A /* ViewAllCardView.swift */,
+				580E07062BE3B4F20042375A /* MovieDetailView.swift */,
 			);
 			path = HomeViewComponents;
 			sourceTree = "<group>";

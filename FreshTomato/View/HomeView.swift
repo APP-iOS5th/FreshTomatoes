@@ -9,14 +9,16 @@ import SwiftUI
 import Combine
 
 struct HomeView: View {
-    @StateObject var homeVM: HomeViewModel = HomeViewModel()
+    @EnvironmentObject var homeVM: HomeViewModel
+    
+    @Binding var currentTab: Tab
     
     var body: some View {
         GeometryReader { geometry in
             NavigationStack {
                 ScrollView {
                     VStack {
-                        TitleView(semiTitle: "Fresh Tomatoes", title: "NOW SHOWING", buttonTitle: "View all", movies: homeVM.movies, allViewImageWidth: geometry.size.width * 0.27, allViewImageHeight: geometry.size.height * 0.21, detailViewWidth: geometry.size.width, detailViewHeight: geometry.size.height * 0.4)
+                        TitleView(currentTab: $currentTab, semiTitle: "Fresh Tomatoes", title: "NOW SHOWING", buttonTitle: "View all", movies: homeVM.movies, allViewImageWidth: geometry.size.width * 0.27, allViewImageHeight: geometry.size.height * 0.21, detailViewWidth: geometry.size.width, detailViewHeight: geometry.size.height * 0.4)
                             .padding(.horizontal)
                         ZStack {
                             Image("cinemaImage")
@@ -27,8 +29,8 @@ struct HomeView: View {
                                 }
                             // 영화 Card ScrollView
                             ScrollView(.horizontal) {
-                                HStack(spacing: geometry.size.width * 0.07) {
-                                    ForEach(homeVM.movies, id: \.id) {  movie in
+                                LazyHStack(spacing: geometry.size.width * 0.07) {
+                                    ForEach(homeVM.movies.prefix(15), id: \.id) {  movie in
                                         NavigationLink(destination: MovieDetailView(movie: movie, imageWidth: geometry.size.width, imageHeight: geometry.size.height * 0.4)) {
                                             NowShowingCardView(recWidth: geometry.size.width * 0.6, recHeight: geometry.size.height * 0.5, movie: movie)
                                                 .containerRelativeFrame(.horizontal, count: 2, spacing: -30)
@@ -50,30 +52,28 @@ struct HomeView: View {
                             .scrollTargetBehavior(.viewAligned)
                         }
                         
-                        TitleView(semiTitle: "", title: "UP COMING", buttonTitle: "View all", movies: homeVM.upComingMovies, allViewImageWidth: geometry.size.width * 0.27, allViewImageHeight: geometry.size.height * 0.21, detailViewWidth: geometry.size.width, detailViewHeight: geometry.size.height * 0.4)
+                        TitleView(currentTab: $currentTab, semiTitle: "", title: "UP COMING", buttonTitle: "View all", movies: homeVM.upComingMovies, allViewImageWidth: geometry.size.width * 0.27, allViewImageHeight: geometry.size.height * 0.21, detailViewWidth: geometry.size.width, detailViewHeight: geometry.size.height * 0.4)
                             .padding(.horizontal)
                         
                         ScrollView(.horizontal) {
-                            HStack {
-                                ForEach(homeVM.upComingMovies, id: \.id) { movie in
+                            LazyHStack {
+                                ForEach(homeVM.upComingMovies.prefix(15), id: \.id) { movie in
                                     NavigationLink(destination: MovieDetailView(movie: movie, imageWidth: geometry.size.width, imageHeight: geometry.size.height * 0.4)){
                                         MovieCard(movie: movie, recWidth: geometry.size.width * 0.37, recHeight: geometry.size.height * 0.3, imageType: "Poster")
-//                                        .onTapGesture {
-//                                            homeVM.setStorage(movie: movie)
-//                                        }
                                     }
                                 }
                             }
                             .padding(.horizontal, geometry.size.width * 0.045)
                         }
+                        .frame(width: geometry.size.width, height: geometry.size.height * 0.32)
                         .scrollIndicators(.hidden)
                         
-                        TitleView(semiTitle: "", title: "OVERALL MOVIE RANKING", buttonTitle: "View all", movies: homeVM.upComingMovies, allViewImageWidth: geometry.size.width * 0.27, allViewImageHeight: geometry.size.height * 0.21, detailViewWidth: geometry.size.width, detailViewHeight: geometry.size.height * 0.4)
+                        TitleView(currentTab: $currentTab, semiTitle: "", title: "ALL MOVIE", buttonTitle: "View all", movies: homeVM.allMovies, allViewImageWidth: geometry.size.width * 0.27, allViewImageHeight: geometry.size.height * 0.21, detailViewWidth: geometry.size.width, detailViewHeight: geometry.size.height * 0.4)
                             .padding(.horizontal)
                         
                         ScrollView(.horizontal) {
-                            HStack {
-                                ForEach(homeVM.movies, id: \.id) { movie in
+                            LazyHStack {
+                                ForEach(homeVM.allMovies.prefix(15), id: \.id) { movie in
                                     NavigationLink(destination: MovieDetailView(movie: movie, imageWidth: geometry.size.width, imageHeight: geometry.size.height * 0.4)){
                                         MovieCard(movie: movie, recWidth: geometry.size.width * 0.37, recHeight: geometry.size.height * 0.13, imageType: "Background")
                                     }
@@ -91,8 +91,9 @@ struct HomeView: View {
             }
         }
         .onAppear {
-            homeVM.fetchNowPlayingMovies(pages: 1)
-            homeVM.fetchUpComingMovies(pages: 1)
+            homeVM.fetchNowPlayingMovies()
+            homeVM.fetchUpComingMovies()
+            homeVM.fetchTopRankMovies()
         }
     }
     

@@ -22,7 +22,7 @@ struct MovieCard: View {
                     .frame(width: recWidth, height: recHeight)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
             } placeholder: {
-                ProgressView()
+//                ProgressView()
             }
             VStack(alignment: .leading) {
                 Text(movie.title)
