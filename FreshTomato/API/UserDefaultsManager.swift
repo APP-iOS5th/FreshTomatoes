@@ -3,10 +3,8 @@
 //  FreshTomato
 //
 //  Created by 임재현 on 5/3/24.
-//
 
 import Foundation
-
 
 struct Item: Codable {
     var id:Int
@@ -16,6 +14,7 @@ struct Item: Codable {
 }
 
 class StorageManager {
+    
     // UserDefaults key
     private let userDefaultsKey = "items"
     
@@ -29,6 +28,7 @@ class StorageManager {
         saveItems(items)
         print("저장 성공 \(items)")
     }
+    
     
     // 데이터 읽기
     func getAllItems() -> [Item] {
@@ -52,7 +52,7 @@ class StorageManager {
             saveItems(items)
         }
     }
-
+    
     // 데이터 삭제
     func deleteItem(withID id: Int) {
         var items = getAllItems()
@@ -61,7 +61,6 @@ class StorageManager {
     }
     
     // MARK: - 인코딩, 디코딩
-    
     private func saveItems(_ items: [Item]) {
         do {
             let data = try JSONEncoder().encode(items)
