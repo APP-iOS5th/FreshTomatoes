@@ -4,7 +4,6 @@
 //
 //  Created by 임재현 on 4/30/24.
 //
-
 import Foundation
 import SwiftUI
 
@@ -140,4 +139,26 @@ class MovieService {
         }
     }
 }
+
+enum MovieError: Error {
+    case apiError
+    case invalidEndpoing
+    case invalidResponse
+    case noData
+    case serializationError
+    
+    var localizedDescription: String {
+        switch self {
+        case .apiError: return "Failed to fetch data"
+        case .invalidEndpoing: return "Invalid endpoint"
+        case .invalidResponse: return "Invalid response"
+        case .noData: return "No data"
+        case .serializationError: return "Failed to decode data"
+        }
+    }
+    var errorUserInfo: [String : Any] {
+        [NSLocalizedDescriptionKey: localizedDescription]
+    }
+}
+
 
