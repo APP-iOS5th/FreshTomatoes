@@ -14,13 +14,14 @@ struct GridView: View {
     
     let columns: [GridItem] = Array(repeating: .init(.fixed(100), spacing: 30), count: 3)
     
+    var detailViewWitdh: CGFloat
+    var detailViewHeight: CGFloat
+    
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 10) {
-              
-             
                     ForEach(movies, id: \.self) { movie in
-                     NavigationLink(destination: MovieDetailView(movie: movie, imageWidth: 300, imageHeight: 450)) {
+                     NavigationLink(destination: MovieDetailView(movie: movie, imageWidth: detailViewWitdh, imageHeight: detailViewHeight)) {
                          VStack(alignment: .center) {
                              if let imageURL = movie.backdropURL {
                                  AsyncImage(url: imageURL) { image in

@@ -25,7 +25,6 @@ struct ViewAllCardView: View {
                 LazyVGrid(columns: colums, spacing: 10) {
                     ForEach(movies, id: \.id) { movie in
                         NavigationLink(destination: MovieDetailView(movie: movie, imageWidth: detailViewWidth, imageHeight: detailViewHeight)) {
-                           
                             ZStack(alignment: .top) {
                                 RoundedRectangle(cornerRadius: 20)
                                     .frame(width: imageWidth, height: imageHeight * 1.15)
@@ -57,7 +56,6 @@ struct ViewAllCardView: View {
                             .shadow(radius: 5)
                             .foregroundStyle(.black)
                         }
-                       
                     }
                 }
             }

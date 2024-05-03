@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TitleView: View {
+    @Binding var currentTab: Tab
+    
     var semiTitle: String
     var title: String
     var buttonTitle: String
@@ -31,11 +33,21 @@ struct TitleView: View {
                     .foregroundStyle(.red)
             }
             Spacer()
-            NavigationLink(destination: ViewAllCardView(movies: movies, imageWidth: allViewImageWidth, imageHeight: allViewImageHeight, detailViewWidth: detailViewWidth, detailViewHeight: detailViewHeight)) {
-                    Text(buttonTitle)
-                        .foregroundStyle(.red)
-                        .padding(.bottom, 4)
-            }
+//            if title != "ALL MOVIE" {
+                NavigationLink(destination: ViewAllCardView(movies: movies, imageWidth: allViewImageWidth, imageHeight: allViewImageHeight, detailViewWidth: detailViewWidth, detailViewHeight: detailViewHeight)) {
+                        Text(buttonTitle)
+                            .foregroundStyle(.red)
+                            .padding(.bottom, 4)
+                }
+//            }else {
+//                Button(action: {
+//                    currentTab = .nowandupcoming
+//                }) {
+//                    Text(buttonTitle)
+//                        .foregroundStyle(.red)
+//                        .padding(.bottom, 4)
+//                }
+//            }
         }
     }
 }

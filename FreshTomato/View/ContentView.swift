@@ -19,7 +19,7 @@ struct ContentView: View {
         var body: some View {
             VStack(spacing: 0) {
                 TabView(selection: $currentTab) {
-                    HomeView()
+                    HomeView(currentTab: $currentTab)
                         .tag(Tab.home)
                     SecondView()
                         .tag(Tab.nowandupcoming)
