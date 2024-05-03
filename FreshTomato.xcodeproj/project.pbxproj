@@ -25,6 +25,17 @@
 		469304C72BE0D111003BBA13 /* SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469304C62BE0D111003BBA13 /* SecondViewModel.swift */; };
 		469304C92BE0D119003BBA13 /* ThirdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469304C82BE0D119003BBA13 /* ThirdViewModel.swift */; };
 		469304CB2BE0D222003BBA13 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469304CA2BE0D222003BBA13 /* HomeViewModel.swift */; };
+		580E07022BE3B4BE0042375A /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580E06FD2BE3B4BE0042375A /* BackgroundImageView.swift */; };
+		580E07032BE3B4BE0042375A /* MovieCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580E06FE2BE3B4BE0042375A /* MovieCard.swift */; };
+		580E07042BE3B4BE0042375A /* NowShowingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580E06FF2BE3B4BE0042375A /* NowShowingCardView.swift */; };
+		580E07052BE3B4BE0042375A /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580E07002BE3B4BE0042375A /* TitleView.swift */; };
+		580E07072BE3B4F20042375A /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580E07062BE3B4F20042375A /* MovieDetailView.swift */; };
+		C104E8BC2BE3F07E00D44E0D /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C104E8BB2BE3F07E00D44E0D /* BookmarkViewModel.swift */; };
+		C104E8BE2BE3F2C900D44E0D /* LikeListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C104E8BD2BE3F2C900D44E0D /* LikeListDetailView.swift */; };
+		CB6648CF2BE33476008DA78F /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6648CE2BE33476008DA78F /* RatingView.swift */; };
+		CBD00C742BE1C7AB00C3B271 /* FourthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD00C732BE1C7AB00C3B271 /* FourthView.swift */; };
+		CBD00C772BE1D44B00C3B271 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD00C762BE1D44B00C3B271 /* CustomTabBarView.swift */; };
+		CBD00C792BE1D47A00C3B271 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD00C782BE1D47A00C3B271 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +58,17 @@
 		469304C62BE0D111003BBA13 /* SecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewModel.swift; sourceTree = "<group>"; };
 		469304C82BE0D119003BBA13 /* ThirdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewModel.swift; sourceTree = "<group>"; };
 		469304CA2BE0D222003BBA13 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		580E06FD2BE3B4BE0042375A /* BackgroundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
+		580E06FE2BE3B4BE0042375A /* MovieCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCard.swift; sourceTree = "<group>"; };
+		580E06FF2BE3B4BE0042375A /* NowShowingCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowShowingCardView.swift; sourceTree = "<group>"; };
+		580E07002BE3B4BE0042375A /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		580E07062BE3B4F20042375A /* MovieDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieDetailView.swift; path = FreshTomato/View/MovieDetailView.swift; sourceTree = SOURCE_ROOT; };
+		C104E8BB2BE3F07E00D44E0D /* BookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewModel.swift; sourceTree = "<group>"; };
+		C104E8BD2BE3F2C900D44E0D /* LikeListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeListDetailView.swift; sourceTree = "<group>"; };
+		CB6648CE2BE33476008DA78F /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		CBD00C732BE1C7AB00C3B271 /* FourthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthView.swift; sourceTree = "<group>"; };
+		CBD00C762BE1D44B00C3B271 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		CBD00C782BE1D47A00C3B271 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +101,7 @@
 		469304982BE0C50E003BBA13 /* FreshTomato */ = {
 			isa = PBXGroup;
 			children = (
+				CBD00C752BE1D40400C3B271 /* CustomTabBar */,
 				469304A72BE0CDA2003BBA13 /* View */,
 				469304AB2BE0CDDA003BBA13 /* Utils */,
 				469304AA2BE0CDD1003BBA13 /* Model */,
@@ -102,10 +125,14 @@
 		469304A72BE0CDA2003BBA13 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				580E07012BE3B4BE0042375A /* HomeViewComponents */,
 				4693049B2BE0C50E003BBA13 /* ContentView.swift */,
 				469304AE2BE0CE13003BBA13 /* HomeView.swift */,
 				469304C02BE0D09D003BBA13 /* SecondView.swift */,
 				469304C22BE0D0A8003BBA13 /* ThirdView.swift */,
+				CBD00C732BE1C7AB00C3B271 /* FourthView.swift */,
+				CB6648CE2BE33476008DA78F /* RatingView.swift */,
+				C104E8BD2BE3F2C900D44E0D /* LikeListDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -117,6 +144,7 @@
 				469304C62BE0D111003BBA13 /* SecondViewModel.swift */,
 				469304C82BE0D119003BBA13 /* ThirdViewModel.swift */,
 				469304CA2BE0D222003BBA13 /* HomeViewModel.swift */,
+				C104E8BB2BE3F07E00D44E0D /* BookmarkViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -163,6 +191,27 @@
 				4693049D2BE0C511003BBA13 /* Assets.xcassets */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		580E07012BE3B4BE0042375A /* HomeViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				580E07062BE3B4F20042375A /* MovieDetailView.swift */,
+				580E06FD2BE3B4BE0042375A /* BackgroundImageView.swift */,
+				580E06FE2BE3B4BE0042375A /* MovieCard.swift */,
+				580E06FF2BE3B4BE0042375A /* NowShowingCardView.swift */,
+				580E07002BE3B4BE0042375A /* TitleView.swift */,
+			);
+			path = HomeViewComponents;
+			sourceTree = "<group>";
+		};
+		CBD00C752BE1D40400C3B271 /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CBD00C762BE1D44B00C3B271 /* CustomTabBarView.swift */,
+				CBD00C782BE1D47A00C3B271 /* Helper.swift */,
+			);
+			path = CustomTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,22 +284,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				580E07032BE3B4BE0042375A /* MovieCard.swift in Sources */,
 				469304AF2BE0CE13003BBA13 /* HomeView.swift in Sources */,
 				469304C32BE0D0A8003BBA13 /* ThirdView.swift in Sources */,
 				469304B72BE0CE74003BBA13 /* BaseURL.swift in Sources */,
 				469304CB2BE0D222003BBA13 /* HomeViewModel.swift in Sources */,
 				469304B52BE0CE69003BBA13 /* Secrets.swift in Sources */,
 				469304BB2BE0CFC2003BBA13 /* ColorExtension.swift in Sources */,
+				CB6648CF2BE33476008DA78F /* RatingView.swift in Sources */,
 				469304BD2BE0CFCF003BBA13 /* ViewExtension.swift in Sources */,
 				469304C92BE0D119003BBA13 /* ThirdViewModel.swift in Sources */,
+				CBD00C792BE1D47A00C3B271 /* Helper.swift in Sources */,
+				C104E8BE2BE3F2C900D44E0D /* LikeListDetailView.swift in Sources */,
 				4693049C2BE0C50E003BBA13 /* ContentView.swift in Sources */,
+				CBD00C772BE1D44B00C3B271 /* CustomTabBarView.swift in Sources */,
 				469304C12BE0D09D003BBA13 /* SecondView.swift in Sources */,
 				4693049A2BE0C50E003BBA13 /* FreshTomatoApp.swift in Sources */,
 				469304C52BE0D0D1003BBA13 /* ContentViewModel.swift in Sources */,
+				580E07022BE3B4BE0042375A /* BackgroundImageView.swift in Sources */,
 				469304B92BE0CFAD003BBA13 /* Movie.swift in Sources */,
 				469304BF2BE0CFDC003BBA13 /* ImageExtension.swift in Sources */,
 				469304C72BE0D111003BBA13 /* SecondViewModel.swift in Sources */,
+				CBD00C742BE1C7AB00C3B271 /* FourthView.swift in Sources */,
+				580E07072BE3B4F20042375A /* MovieDetailView.swift in Sources */,
+				C104E8BC2BE3F07E00D44E0D /* BookmarkViewModel.swift in Sources */,
 				469304B32BE0CE58003BBA13 /* MovieService.swift in Sources */,
+				580E07042BE3B4BE0042375A /* NowShowingCardView.swift in Sources */,
+				580E07052BE3B4BE0042375A /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +444,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FreshTomato/Preview Content\"";
-				DEVELOPMENT_TEAM = 7K76RWRQBL;
+				DEVELOPMENT_TEAM = P95R3MRRWK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -392,6 +452,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -399,9 +460,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaeHyeonLim9298.FreshTomato;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -413,7 +478,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FreshTomato/Preview Content\"";
-				DEVELOPMENT_TEAM = 7K76RWRQBL;
+				DEVELOPMENT_TEAM = P95R3MRRWK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -421,6 +486,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -428,9 +494,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaeHyeonLim9298.FreshTomato;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
