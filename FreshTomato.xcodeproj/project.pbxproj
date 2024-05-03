@@ -35,6 +35,9 @@
 		469304C72BE0D111003BBA13 /* SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469304C62BE0D111003BBA13 /* SecondViewModel.swift */; };
 		469304C92BE0D119003BBA13 /* ThirdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469304C82BE0D119003BBA13 /* ThirdViewModel.swift */; };
 		469304CB2BE0D222003BBA13 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469304CA2BE0D222003BBA13 /* HomeViewModel.swift */; };
+		CB31347C2BE379AB0046AC6B /* MyMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB31347B2BE379AB0046AC6B /* MyMovie.swift */; };
+		CB3134802BE481480046AC6B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB31347F2BE481480046AC6B /* SplashView.swift */; };
+		CB3134832BE49EEB0046AC6B /* BagelFatOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB3134822BE49EEB0046AC6B /* BagelFatOne-Regular.ttf */; };
 		CB6648CF2BE33476008DA78F /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6648CE2BE33476008DA78F /* RatingView.swift */; };
 		CBD00C742BE1C7AB00C3B271 /* FourthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD00C732BE1C7AB00C3B271 /* FourthView.swift */; };
 		CBD00C772BE1D44B00C3B271 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD00C762BE1D44B00C3B271 /* CustomTabBarView.swift */; };
@@ -71,6 +74,9 @@
 		469304C62BE0D111003BBA13 /* SecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewModel.swift; sourceTree = "<group>"; };
 		469304C82BE0D119003BBA13 /* ThirdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewModel.swift; sourceTree = "<group>"; };
 		469304CA2BE0D222003BBA13 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CB31347B2BE379AB0046AC6B /* MyMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMovie.swift; sourceTree = "<group>"; };
+		CB31347F2BE481480046AC6B /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		CB3134822BE49EEB0046AC6B /* BagelFatOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BagelFatOne-Regular.ttf"; sourceTree = "<group>"; };
 		CB6648CE2BE33476008DA78F /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		CBD00C732BE1C7AB00C3B271 /* FourthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthView.swift; sourceTree = "<group>"; };
 		CBD00C762BE1D44B00C3B271 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
@@ -130,6 +136,8 @@
 			children = (
 				CBD00C752BE1D40400C3B271 /* CustomTabBar */,
 				469304A72BE0CDA2003BBA13 /* View */,
+				CB3134812BE49ECD0046AC6B /* Fonts */,
+				CB6648D02BE35D70008DA78F /* MyData */,
 				469304AB2BE0CDDA003BBA13 /* Utils */,
 				469304AA2BE0CDD1003BBA13 /* Model */,
 				469304A82BE0CDAC003BBA13 /* ViewModel */,
@@ -159,7 +167,7 @@
 				469304C22BE0D0A8003BBA13 /* ThirdView.swift */,
 				CBD00C732BE1C7AB00C3B271 /* FourthView.swift */,
 				CB6648CE2BE33476008DA78F /* RatingView.swift */,
-				46008EAC2BE4560500AC249C /* MovieDetailView.swift */,
+				CB31347F2BE481480046AC6B /* SplashView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -220,6 +228,22 @@
 				4693049D2BE0C511003BBA13 /* Assets.xcassets */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		CB3134812BE49ECD0046AC6B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CB3134822BE49EEB0046AC6B /* BagelFatOne-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CB6648D02BE35D70008DA78F /* MyData */ = {
+			isa = PBXGroup;
+			children = (
+				CB31347B2BE379AB0046AC6B /* MyMovie.swift */,
+			);
+			path = MyData;
 			sourceTree = "<group>";
 		};
 		CBD00C752BE1D40400C3B271 /* CustomTabBar */ = {
@@ -289,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB3134832BE49EEB0046AC6B /* BagelFatOne-Regular.ttf in Resources */,
 				469304A12BE0C511003BBA13 /* Preview Assets.xcassets in Resources */,
 				4693049E2BE0C511003BBA13 /* Assets.xcassets in Resources */,
 			);
@@ -302,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				469304AF2BE0CE13003BBA13 /* HomeView.swift in Sources */,
+				CB3134802BE481480046AC6B /* SplashView.swift in Sources */,
 				469304C32BE0D0A8003BBA13 /* ThirdView.swift in Sources */,
 				469304B72BE0CE74003BBA13 /* BaseURL.swift in Sources */,
 				46008EB32BE456C100AC249C /* TitleView.swift in Sources */,

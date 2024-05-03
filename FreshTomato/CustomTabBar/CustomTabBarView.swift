@@ -73,7 +73,7 @@ struct CustomTabBarView: View {
             return 0
         case .nowandupcoming:
             return 1
-        case .rankings:
+        case .search:
             return 2
         case .my:
             return 3
@@ -86,8 +86,8 @@ struct CustomTabBarView: View {
             return "house.fill"
         case "상영작":
             return "movieclapper.fill"
-        case "랭킹":
-            return "trophy.fill"
+        case "검색":
+            return "magnifyingglass.circle.fill"
         case "MY":
             return "person.fill"
         default:
