@@ -16,6 +16,7 @@
 		46008EB52BE456CC00AC249C /* ViewAllCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46008EB42BE456CC00AC249C /* ViewAllCardView.swift */; };
 		46008EB72BE458A100AC249C /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46008EB62BE458A100AC249C /* UserDefaultsManager.swift */; };
 		46008EB92BE45C6C00AC249C /* FourthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46008EB82BE45C6C00AC249C /* FourthViewModel.swift */; };
+		4602984F2BE4AEB400B93B71 /* BookMarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4602984E2BE4AEB400B93B71 /* BookMarkViewModel.swift */; };
 		4693049A2BE0C50E003BBA13 /* FreshTomatoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469304992BE0C50E003BBA13 /* FreshTomatoApp.swift */; };
 		4693049C2BE0C50E003BBA13 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693049B2BE0C50E003BBA13 /* ContentView.swift */; };
 		4693049E2BE0C511003BBA13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4693049D2BE0C511003BBA13 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		46008EB42BE456CC00AC249C /* ViewAllCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllCardView.swift; sourceTree = "<group>"; };
 		46008EB62BE458A100AC249C /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		46008EB82BE45C6C00AC249C /* FourthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewModel.swift; sourceTree = "<group>"; };
+		4602984E2BE4AEB400B93B71 /* BookMarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkViewModel.swift; sourceTree = "<group>"; };
 		469304962BE0C50E003BBA13 /* FreshTomato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshTomato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469304992BE0C50E003BBA13 /* FreshTomatoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshTomatoApp.swift; sourceTree = "<group>"; };
 		4693049B2BE0C50E003BBA13 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				469304C82BE0D119003BBA13 /* ThirdViewModel.swift */,
 				469304CA2BE0D222003BBA13 /* HomeViewModel.swift */,
 				46008EB82BE45C6C00AC249C /* FourthViewModel.swift */,
+				4602984E2BE4AEB400B93B71 /* BookMarkViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				469304C12BE0D09D003BBA13 /* SecondView.swift in Sources */,
 				4693049A2BE0C50E003BBA13 /* FreshTomatoApp.swift in Sources */,
 				469304C52BE0D0D1003BBA13 /* ContentViewModel.swift in Sources */,
+				4602984F2BE4AEB400B93B71 /* BookMarkViewModel.swift in Sources */,
 				469304B92BE0CFAD003BBA13 /* Movie.swift in Sources */,
 				46008EAF2BE456A200AC249C /* MovieCard.swift in Sources */,
 				469304BF2BE0CFDC003BBA13 /* ImageExtension.swift in Sources */,
