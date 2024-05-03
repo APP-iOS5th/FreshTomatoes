@@ -80,3 +80,8 @@ extension Movie  {
         hasher.combine(id)
     }
 }
+
+
+struct SearchMovie {
+    
+}

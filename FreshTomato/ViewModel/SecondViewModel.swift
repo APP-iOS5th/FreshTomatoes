@@ -10,7 +10,8 @@
 import Foundation
 
 class SecondViewModel: ObservableObject {
-
+    
+    
     @Published var movies: [Movie] = []
     @Published var filteredMovies: [Movie] = []
     @Published var selectedGenre: Int? = nil
@@ -18,6 +19,9 @@ class SecondViewModel: ObservableObject {
     @Published var pages: [Int] = [1,2,3,4,5]
     @Published var genres = MovieGenre.allCases
 
+    
+    
+    
     //MARK: - API 로 데이터 받아오는 함수
     func fetchNowPlayingMovies(pages:Int) {
       //  isLoading = true
@@ -42,6 +46,9 @@ class SecondViewModel: ObservableObject {
             }
         }
     }
+    
+    
+    
     
     //MARK: - 각 page마다 가져올수 있는 데이터가 한정되어있어 여러개의 페이지를 동시에 가져와서 작업하는 함수(page가 5개이니 5개의 페이지의 함수가 호출)
     func fetchMoviesFromMultiplePages(pages:[Int]) {

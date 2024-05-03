@@ -76,6 +76,7 @@ struct MovieDetailView: View {
             }
             .padding(.top, imageWidth * -0.3)
         }
+      
     }
 }
 
