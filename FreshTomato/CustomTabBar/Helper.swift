@@ -18,7 +18,7 @@ extension View {
 enum Tab: String, CaseIterable {
     case home = "HOME"
     case nowandupcoming = "상영작"
-    case rankings = "랭킹"
+    case search = "검색"
     case my = "MY"
 }
 
@@ -33,9 +33,9 @@ extension Tab {
             return AnyView(
                 Label("상영작", systemImage: "movieclapper.fill")
             )
-        case .rankings:
+        case .search:
             return AnyView(
-                Label("랭킹", systemImage: "trophy.fill")
+                Label("검색", systemImage: "magnifyinglass.circle.fill")
             )
         case .my:
             return AnyView(

@@ -10,11 +10,20 @@ import SwiftUI
 @main
 struct FreshTomatoApp: App {
     @StateObject var homeVM: HomeViewModel = HomeViewModel()
-    
+    init() {
+            for family: String in UIFont.familyNames {
+                print(family)
+                for names: String in UIFont.fontNames(forFamilyName: family) {
+                    print("=== \(names)")
+                }
+            }
+        }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView()
                 .environmentObject(homeVM)
+            
+            
         }
     }
 }

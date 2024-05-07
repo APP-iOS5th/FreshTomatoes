@@ -24,7 +24,7 @@ struct ContentView: View {
                     SecondView()
                         .tag(Tab.nowandupcoming)
                     ThirdView()
-                        .tag(Tab.rankings)
+                        .tag(Tab.search)
                     FourthView()
                         .tag(Tab.my)
                 }

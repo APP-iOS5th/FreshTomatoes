@@ -18,6 +18,10 @@
 		46008EB72BE458A100AC249C /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46008EB62BE458A100AC249C /* UserDefaultsManager.swift */; };
 		46008EB92BE45C6C00AC249C /* FourthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46008EB82BE45C6C00AC249C /* FourthViewModel.swift */; };
 		4602984F2BE4AEB400B93B71 /* BookMarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4602984E2BE4AEB400B93B71 /* BookMarkViewModel.swift */; };
+		460298A02BEA46D600B93B71 /* BagelFatOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4602989F2BEA46D600B93B71 /* BagelFatOne-Regular.ttf */; };
+		460298A22BEA46DE00B93B71 /* WagleWagle-Color.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 460298A12BEA46DE00B93B71 /* WagleWagle-Color.ttf */; };
+		460298A52BEA473900B93B71 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460298A42BEA473900B93B71 /* SplashView.swift */; };
+		460298A72BEA477D00B93B71 /* FontExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460298A62BEA477D00B93B71 /* FontExtenstion.swift */; };
 		4693049A2BE0C50E003BBA13 /* FreshTomatoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469304992BE0C50E003BBA13 /* FreshTomatoApp.swift */; };
 		4693049C2BE0C50E003BBA13 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693049B2BE0C50E003BBA13 /* ContentView.swift */; };
 		4693049E2BE0C511003BBA13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4693049D2BE0C511003BBA13 /* Assets.xcassets */; };
@@ -55,6 +59,11 @@
 		46008EB62BE458A100AC249C /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		46008EB82BE45C6C00AC249C /* FourthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewModel.swift; sourceTree = "<group>"; };
 		4602984E2BE4AEB400B93B71 /* BookMarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkViewModel.swift; sourceTree = "<group>"; };
+		4602989F2BEA46D600B93B71 /* BagelFatOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BagelFatOne-Regular.ttf"; sourceTree = "<group>"; };
+		460298A12BEA46DE00B93B71 /* WagleWagle-Color.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WagleWagle-Color.ttf"; sourceTree = "<group>"; };
+		460298A32BEA46E900B93B71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		460298A42BEA473900B93B71 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		460298A62BEA477D00B93B71 /* FontExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtenstion.swift; sourceTree = "<group>"; };
 		469304962BE0C50E003BBA13 /* FreshTomato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshTomato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469304992BE0C50E003BBA13 /* FreshTomatoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshTomatoApp.swift; sourceTree = "<group>"; };
 		4693049B2BE0C50E003BBA13 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,6 +123,16 @@
 			path = HomeViewComponent;
 			sourceTree = "<group>";
 		};
+		4602989E2BEA46B300B93B71 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				460298A32BEA46E900B93B71 /* Info.plist */,
+				4602989F2BEA46D600B93B71 /* BagelFatOne-Regular.ttf */,
+				460298A12BEA46DE00B93B71 /* WagleWagle-Color.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		4693048D2BE0C50E003BBA13 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +155,7 @@
 				CBD00C752BE1D40400C3B271 /* CustomTabBar */,
 				469304A72BE0CDA2003BBA13 /* View */,
 				CB6648D02BE35D70008DA78F /* MyData */,
+				4602989E2BEA46B300B93B71 /* Fonts */,
 				469304AB2BE0CDDA003BBA13 /* Utils */,
 				469304AA2BE0CDD1003BBA13 /* Model */,
 				469304A82BE0CDAC003BBA13 /* ViewModel */,
@@ -166,6 +186,7 @@
 				CBD00C732BE1C7AB00C3B271 /* FourthView.swift */,
 				CB6648CE2BE33476008DA78F /* RatingView.swift */,
 				46008EA22BE3A6BF00AC249C /* HomeDetailView.swift */,
+				460298A42BEA473900B93B71 /* SplashView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -215,6 +236,7 @@
 				469304BA2BE0CFC2003BBA13 /* ColorExtension.swift */,
 				469304BC2BE0CFCF003BBA13 /* ViewExtension.swift */,
 				469304BE2BE0CFDC003BBA13 /* ImageExtension.swift */,
+				460298A62BEA477D00B93B71 /* FontExtenstion.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -303,6 +325,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				460298A22BEA46DE00B93B71 /* WagleWagle-Color.ttf in Resources */,
+				460298A02BEA46D600B93B71 /* BagelFatOne-Regular.ttf in Resources */,
 				469304A12BE0C511003BBA13 /* Preview Assets.xcassets in Resources */,
 				4693049E2BE0C511003BBA13 /* Assets.xcassets in Resources */,
 			);
@@ -338,6 +362,8 @@
 				4602984F2BE4AEB400B93B71 /* BookMarkViewModel.swift in Sources */,
 				469304B92BE0CFAD003BBA13 /* Movie.swift in Sources */,
 				46008EAF2BE456A200AC249C /* MovieCard.swift in Sources */,
+				460298A72BEA477D00B93B71 /* FontExtenstion.swift in Sources */,
+				460298A52BEA473900B93B71 /* SplashView.swift in Sources */,
 				469304BF2BE0CFDC003BBA13 /* ImageExtension.swift in Sources */,
 				46008EB12BE456B300AC249C /* NowShowingCardView.swift in Sources */,
 				46008EAA2BE454D500AC249C /* TagButton.swift in Sources */,
@@ -480,9 +506,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FreshTomato/Preview Content\"";
-				DEVELOPMENT_TEAM = P95R3MRRWK;
+				DEVELOPMENT_TEAM = 7K76RWRQBL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FreshTomato/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -514,9 +541,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FreshTomato/Preview Content\"";
-				DEVELOPMENT_TEAM = P95R3MRRWK;
+				DEVELOPMENT_TEAM = 7K76RWRQBL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FreshTomato/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

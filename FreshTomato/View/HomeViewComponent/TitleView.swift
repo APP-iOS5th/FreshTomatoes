@@ -24,12 +24,11 @@ struct TitleView: View {
         HStack(alignment: .bottom) {
             VStack(alignment: .leading) {
                 Text(semiTitle)
-                    .fontWeight(.light)
-                    .font(.headline)
+                    .font(.BagelFatOne16)
+                    .foregroundColor(.black)
                 Text(title)
-                    .fontWeight(.semibold)
-                    .font(.title)
-                    .foregroundStyle(.red)
+                    .font(.BagelFatOne34)
+                    .foregroundColor(.newPrimaryColor)
             }
             Spacer()
                 NavigationLink(destination: ViewAllCardView(movies: movies, imageWidth: allViewImageWidth, imageHeight: allViewImageHeight, detailViewWidth: detailViewWidth, detailViewHeight: detailViewHeight)) {
