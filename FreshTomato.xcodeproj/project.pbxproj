@@ -19,7 +19,6 @@
 		46008EB92BE45C6C00AC249C /* FourthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46008EB82BE45C6C00AC249C /* FourthViewModel.swift */; };
 		4602984F2BE4AEB400B93B71 /* BookMarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4602984E2BE4AEB400B93B71 /* BookMarkViewModel.swift */; };
 		460298A02BEA46D600B93B71 /* BagelFatOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4602989F2BEA46D600B93B71 /* BagelFatOne-Regular.ttf */; };
-		460298A22BEA46DE00B93B71 /* WagleWagle-Color.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 460298A12BEA46DE00B93B71 /* WagleWagle-Color.ttf */; };
 		460298A52BEA473900B93B71 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460298A42BEA473900B93B71 /* SplashView.swift */; };
 		460298A72BEA477D00B93B71 /* FontExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460298A62BEA477D00B93B71 /* FontExtenstion.swift */; };
 		4693049A2BE0C50E003BBA13 /* FreshTomatoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469304992BE0C50E003BBA13 /* FreshTomatoApp.swift */; };
@@ -60,7 +59,6 @@
 		46008EB82BE45C6C00AC249C /* FourthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewModel.swift; sourceTree = "<group>"; };
 		4602984E2BE4AEB400B93B71 /* BookMarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkViewModel.swift; sourceTree = "<group>"; };
 		4602989F2BEA46D600B93B71 /* BagelFatOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BagelFatOne-Regular.ttf"; sourceTree = "<group>"; };
-		460298A12BEA46DE00B93B71 /* WagleWagle-Color.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WagleWagle-Color.ttf"; sourceTree = "<group>"; };
 		460298A32BEA46E900B93B71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		460298A42BEA473900B93B71 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		460298A62BEA477D00B93B71 /* FontExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtenstion.swift; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 			children = (
 				460298A32BEA46E900B93B71 /* Info.plist */,
 				4602989F2BEA46D600B93B71 /* BagelFatOne-Regular.ttf */,
-				460298A12BEA46DE00B93B71 /* WagleWagle-Color.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -325,7 +322,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				460298A22BEA46DE00B93B71 /* WagleWagle-Color.ttf in Resources */,
 				460298A02BEA46D600B93B71 /* BagelFatOne-Regular.ttf in Resources */,
 				469304A12BE0C511003BBA13 /* Preview Assets.xcassets in Resources */,
 				4693049E2BE0C511003BBA13 /* Assets.xcassets in Resources */,

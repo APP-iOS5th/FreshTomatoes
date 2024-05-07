@@ -16,5 +16,4 @@ extension Font {
     static let BagelFatOne20: Font = .custom("BagelFatOne-Regular", size: 20)
     static let BagelFatOne16: Font = .custom("BagelFatOne-Regular", size: 16)
     
-    static let WagleWagle14:Font = .custom("WagleWagle", size: 14)
 }
